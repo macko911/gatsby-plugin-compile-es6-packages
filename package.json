@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0",
-    "regex-escape": "^3.4.8"
+    "regex-escape": "^3.4.8",
+    "slash": "^2.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.0",

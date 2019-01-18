@@ -1,5 +1,6 @@
 const path = require("path");
 const regexEscape = require("regex-escape");
+const slash = require("slash");
 
 exports.onCreateWebpackConfig = ({ actions, loaders }, { modules = [] }) => {
   actions.setWebpackConfig({
@@ -12,7 +13,7 @@ exports.onCreateWebpackConfig = ({ actions, loaders }, { modules = [] }) => {
             // whitelist specific es6 module
             !new RegExp(
               `node_modules\/(${modules.map(regexEscape).join("|")})\/`
-            ).test(modulePath),
+            ).test(slash(modulePath)),
           use: loaders.js()
         }
       ]
